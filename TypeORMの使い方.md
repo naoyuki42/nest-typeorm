@@ -64,7 +64,7 @@ npx ts-node ./node_modules/typeorm/cli migration:generate -d src/migrations -n <
 
 <br>
 
-- マイグレーションの実施
+- マイグレーションの実施  
 下記コマンドでマイグレーションが実施される
 ```
 npm run typeorm:migration:run
