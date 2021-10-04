@@ -59,7 +59,7 @@ npm install --save ts-node
 下記コマンドでmigrationsディレクトリ内にマイグレーションファイルが作成される  
 ※`<name>`に入力した文字がファイル名に使用される
 ```
-npx ts-node ./node_modules/typeorm/cli migration:generate -d src/migrations -n `<name>`
+npx ts-node ./node_modules/typeorm/cli migration:generate -d src/migrations -n <name>
 ```
 
 <br>
