@@ -1,31 +1,16 @@
-import {
-  Entity,
-  BaseEntity,
-  PrimaryGeneratedColumn,
-  Column,
-  CreateDateColumn,
-  UpdateDateColumn,
-  OneToMany,
-} from 'typeorm';
-import { Photo } from './photo.entity';
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
-export class User extends BaseEntity {
+export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ name: 'name' })
-  name: string;
+  @Column()
+  firstName: string;
 
-  @Column({ name: 'age' })
+  @Column()
+  lastName: string;
+
+  @Column()
   age: number;
-
-  @OneToMany(type => Photo, photo => photo.user)
-  photos: Photo;
-
-  @CreateDateColumn({ name: 'created_at' })
-  createdAt: Date;
-
-  @UpdateDateColumn({ name: 'updated_at' })
-  updatedAt: Date;
 }

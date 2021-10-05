@@ -1,4 +1,5 @@
 export class UserDto {
-  name: string;
+  firstName: string;
+  lastName: string;
   age: number;
 }

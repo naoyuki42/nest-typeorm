@@ -37,8 +37,8 @@ npm install --save ts-node
     "username": "<name>",
     "password": "<pass>",
     "database": "<database>",
-    "entities": ["src/entities/*.entity{.ts,.js}"],
-    "migrations": ["src/migrations/*{.ts,.js}"],
+    "entities": ["dist/entities/*.entity{.ts,.js}"],
+    "migrations": ["dist/migrations/*{.ts,.js}"],
     "synchronize": false
 }
 ```
