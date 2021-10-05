@@ -19,7 +19,15 @@ export class UserService {
     return this.usersRepository.findOne(id);
   }
 
-  async createUser(user: UserDto): Promise<User> {
-    return this.usersRepository.save(user);
+  async createUser(user: UserDto): Promise<void> {
+    this.usersRepository.save(user);
+  }
+
+  async updateUser(id: number, user: UserDto): Promise<void> {
+    this.usersRepository.update(id, user);
+  }
+
+  async deleteUser(id: number): Promise<void> {
+    this.usersRepository.delete(id);
   }
 }
