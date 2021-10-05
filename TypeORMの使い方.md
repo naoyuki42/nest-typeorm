@@ -13,35 +13,35 @@
 
 ## 1. 各種インストール
 - TypeORMのインストール  
-```
-npm install --save @nestjs/typeorm typeorm mysql2
-```
+  ```
+  npm install --save @nestjs/typeorm typeorm mysql2
+  ```
 
 <br>
 
 - ts-nodeのインストール  
-```
-npm install --save ts-node
-```
+  ```
+  npm install --save ts-node
+  ```
 <br>
 
 ## 2. 環境設定
 - `ormconfig.json`ファイルの作成  
   プロジェクト内に`ormconfig.json`というファイルを作成  
   ファイル内の記述は下記の通り（詳細は省略）
-```
-{
-    "type": "mysql",
-    "host": "localhost",
-    "port": 3306,
-    "username": "<name>",
-    "password": "<pass>",
-    "database": "<database>",
-    "entities": ["dist/entities/*.entity{.ts,.js}"],
-    "migrations": ["dist/migrations/*{.ts,.js}"],
-    "synchronize": false
-}
-```
+  ```
+  {
+      "type": "mysql",
+      "host": "localhost",
+      "port": 3306,
+      "username": "<name>",
+      "password": "<pass>",
+      "database": "<database>",
+      "entities": ["dist/entities/*.entity{.ts,.js}"],
+      "migrations": ["dist/migrations/*{.ts,.js}"],
+      "synchronize": false
+  }
+  ```
 
 <br>
 
@@ -59,14 +59,18 @@ npm install --save ts-node
 下記コマンドでmigrationsディレクトリ内にマイグレーションファイルが作成される  
 ※`<name>`に入力した文字がファイル名に使用される  
     >例）1633326613530-user.ts
-```
-npx ts-node ./node_modules/typeorm/cli migration:generate -d src/migrations -n <name>
-```
+  ```
+  npx ts-node ./node_modules/typeorm/cli migration:generate -d src/migrations -n <name>
+  ```
 
 <br>
 
 - マイグレーションの実施  
-下記コマンドでマイグレーションが実施される
-```
-npm run typeorm:migration:run
-```
+  ビルドの実施  
+  ```
+  npm run build
+  ```
+  下記コマンドでマイグレーションが実施される
+  ```
+  npm run typeorm:migration:run
+  ```
